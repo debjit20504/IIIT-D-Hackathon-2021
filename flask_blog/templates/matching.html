@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(https://ideas.ted.com/wp-content/uploads/sites/3/2018/09/featured_art_mentor_istock.jpg?resize=1000,600);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+}
+
+</style>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>{{ mentee_name }}</h1>
+        <p>ID : {{ mentee_id }}, has mentor: {{ mentor_name }} with ID: {{ mentor_id }}, has interests in: 
+            <ul>
+                {% for s in mentee_interest %}
+                    <li>{{ s }}</li>
+                {% endfor %}
+            </ul>
+            <br>
+            <br>
+            Join the telegram channel : <a href={{telegram}}> Link</a>
+        </p> 
+</body>
+</html>
