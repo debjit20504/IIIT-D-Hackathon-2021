@@ -1,33 +1,52 @@
 <!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
 <style>
+html{
+    width: 100%;
+    height: 100%;
+}
 
 body{
     margin: 0;
     padding: 0;
-    background: url(https://ideas.ted.com/wp-content/uploads/sites/3/2018/09/featured_art_mentor_istock.jpg?resize=1000,600);
+    width: 100%;
+    height: 100%;
+    background: url(https://eskipaper.com/images/polygon-background-1.jpg);
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
     background-repeat: no-repeat;
 }
 
-</style>
+h1 {
+    text-align: center;
+}
 
-<html>
-<head>
-    <title></title>
+
+</style>
 </head>
 <body>
-    <h1>{{ mentee_name }}</h1>
-        <p>ID : {{ mentee_id }}, has mentor: {{ mentor_name }} with ID: {{ mentor_id }}, has interests in: 
+    <h1>Mentor-Mentee Matching</h1>
+        <br>
+        <br>
+            <p> User Name : {{ mentee_name }}, ID : {{ mentee_id }} 
+        <br>
+        <br>
+            Alloted Mentor : {{ mentor_name }}, ID: {{ mentor_id }}
+        <br>
+        <br>
+            Interests of Mentee : 
             <ul>
                 {% for s in mentee_interest %}
                     <li>{{ s }}</li>
                 {% endfor %}
             </ul>
-            <br>
-            <br>
-            Join the telegram channel : <a href={{telegram}}> Link</a>
+        <br>
+        <br>
+            Link to join the telegram channel : <a href={{telegram}}> Link</a>
         </p> 
 </body>
 </html>
